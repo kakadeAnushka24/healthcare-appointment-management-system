@@ -4,29 +4,46 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Arial, sans-serif;
   background: #f7fbff;
-  color: #1f2937;
+  color: #172033;
 }
 
-.app {
-  min-height: 100vh;
+a {
+  text-decoration: none;
+  color: inherit;
 }
+
+button,
+input {
+  font-family: inherit;
+}
+
+/* ================= NAVBAR ================= */
 
 .navbar {
-  height: 70px;
+  width: 100%;
+  height: 76px;
+  padding: 0 6%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 7%;
   background: white;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid #edf2f7;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo {
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 25px;
+  font-weight: 800;
+  color: #172033;
 }
 
 .logo span {
@@ -35,138 +52,462 @@ body {
 
 .nav-links {
   display: flex;
-  gap: 28px;
   align-items: center;
+  gap: 28px;
 }
 
 .nav-links a {
-  text-decoration: none;
-  color: #374151;
-  font-weight: 500;
+  color: #475569;
+  font-size: 15px;
+  font-weight: 600;
 }
 
-.login-btn {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 8px;
-  background: #2563eb;
-  color: white;
-  cursor: pointer;
-}
-
-.hero {
-  min-height: 520px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 70px 7%;
-  gap: 40px;
-}
-
-.hero-text {
-  max-width: 600px;
-}
-
-.hero-text h1 {
-  font-size: 52px;
-  line-height: 1.15;
-  margin-bottom: 20px;
-}
-
-.hero-text h1 span {
+.nav-links a:hover {
   color: #2563eb;
 }
 
-.hero-text p {
-  font-size: 18px;
-  line-height: 1.7;
-  color: #64748b;
-  margin-bottom: 30px;
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 
-.hero-btn {
-  padding: 14px 28px;
-  border: none;
+.nav-search {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  width: 180px;
+  padding: 9px 12px;
+  border: 1px solid #dbe4ef;
   border-radius: 9px;
+  background: #f8fafc;
+}
+
+.nav-search input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 13px;
+}
+
+.login-btn {
+  border: none;
   background: #2563eb;
   color: white;
-  font-size: 16px;
+  padding: 11px 22px;
+  border-radius: 9px;
+  font-weight: 600;
   cursor: pointer;
 }
 
-.hero-card {
-  width: 350px;
-  padding: 45px 30px;
-  border-radius: 25px;
-  background: white;
-  text-align: center;
-  box-shadow: 0 15px 40px rgba(37, 99, 235, 0.15);
+.login-btn:hover {
+  background: #1d4ed8;
 }
 
-.hero-card .doctor-icon {
-  font-size: 90px;
-  margin-bottom: 20px;
+/* ================= HERO ================= */
+
+.hero {
+  min-height: 610px;
+  padding: 75px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 70px;
+  background: linear-gradient(135deg, #f8fbff, #eef6ff);
 }
 
-.hero-card h2 {
-  margin-bottom: 10px;
+.hero-content {
+  max-width: 650px;
 }
 
-.hero-card p {
+.hero-badge {
+  display: inline-block;
+  padding: 9px 15px;
+  background: #e5efff;
+  color: #2563eb;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+
+.hero h1 {
+  font-size: 56px;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  margin-bottom: 22px;
+}
+
+.hero h1 span {
+  color: #2563eb;
+}
+
+.hero-content > p {
+  max-width: 570px;
   color: #64748b;
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 28px;
 }
+
+/* Main Search */
+
+.main-search {
+  width: 100%;
+  max-width: 590px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  padding: 7px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(30, 64, 175, 0.12);
+  border: 1px solid #e2e8f0;
+}
+
+.main-search span {
+  padding-left: 12px;
+}
+
+.main-search input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 13px 5px;
+  font-size: 14px;
+}
+
+.main-search button {
+  border: none;
+  background: #2563eb;
+  color: white;
+  padding: 13px 23px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  margin-top: 25px;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 13px 22px;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.primary-btn {
+  border: none;
+  background: #2563eb;
+  color: white;
+}
+
+.primary-btn:hover {
+  background: #1d4ed8;
+}
+
+.secondary-btn {
+  background: white;
+  color: #2563eb;
+  border: 1px solid #bfdbfe;
+}
+
+/* ================= HERO VISUAL ================= */
+
+.hero-visual {
+  width: 400px;
+  min-width: 350px;
+  height: 410px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.doctor-card {
+  width: 300px;
+  padding: 40px 25px;
+  background: white;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(37, 99, 235, 0.16);
+}
+
+.doctor-avatar {
+  width: 125px;
+  height: 125px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e8f1ff;
+  border-radius: 50%;
+  font-size: 70px;
+}
+
+.doctor-card h3 {
+  margin-bottom: 8px;
+}
+
+.doctor-card p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.doctor-status {
+  margin-top: 22px;
+  padding: 10px;
+  border-radius: 8px;
+  background: #ecfdf5;
+  color: #15803d;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.doctor-status span {
+  color: #22c55e;
+}
+
+.floating-card {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  padding: 13px 16px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+}
+
+.floating-card strong {
+  display: block;
+  font-size: 13px;
+}
+
+.floating-card small {
+  display: block;
+  color: #64748b;
+  margin-top: 3px;
+  font-size: 11px;
+}
+
+.appointment-card {
+  top: 40px;
+  right: -5px;
+}
+
+.secure-card {
+  bottom: 45px;
+  left: -15px;
+}
+
+/* ================= SECTION ================= */
 
 .section {
-  padding: 70px 7%;
+  padding: 85px 7%;
+}
+
+.section-heading {
   text-align: center;
+  margin-bottom: 45px;
 }
 
-.section h2 {
-  font-size: 32px;
-  margin-bottom: 12px;
+.section-heading > span,
+.feature-text > span {
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
 }
 
-.section > p {
+.section-heading h2 {
+  margin-top: 10px;
+  font-size: 34px;
+}
+
+.section-heading p {
+  margin-top: 12px;
   color: #64748b;
-  margin-bottom: 40px;
 }
 
-.cards {
+/* ================= SPECIALIZATION ================= */
+
+.specialization-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+  gap: 22px;
 }
 
-.card {
+.specialization-card {
+  padding: 28px;
   background: white;
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+  border: 1px solid #e8eef5;
+  border-radius: 15px;
+  transition: 0.25s;
 }
 
-.card-icon {
-  font-size: 42px;
-  margin-bottom: 15px;
+.specialization-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.1);
+  border-color: #bfdbfe;
 }
 
-.card h3 {
+.specialization-card > div {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #eff6ff;
+  border-radius: 12px;
+  font-size: 25px;
+  margin-bottom: 18px;
+}
+
+.specialization-card h3 {
+  margin-bottom: 8px;
+}
+
+.specialization-card p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* ================= HOW IT WORKS ================= */
+
+.how-section {
+  background: white;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.step {
+  text-align: center;
+  padding: 25px;
+}
+
+.step-number {
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #2563eb;
+  color: white;
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.step h3 {
   margin-bottom: 10px;
 }
 
-.card p {
+.step p {
+  color: #64748b;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* ================= FEATURES ================= */
+
+.features-section {
+  padding: 90px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  background: #eff6ff;
+}
+
+.feature-text {
+  max-width: 600px;
+}
+
+.feature-text h2 {
+  font-size: 36px;
+  margin: 12px 0 18px;
+}
+
+.feature-text > p {
+  color: #64748b;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.feature-list {
+  display: grid;
+  gap: 13px;
+  color: #334155;
+  font-weight: 600;
+}
+
+.feature-box {
+  width: 370px;
+  padding: 40px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(37, 99, 235, 0.1);
+}
+
+.big-icon {
+  font-size: 65px;
+  margin-bottom: 18px;
+}
+
+.feature-box h3 {
+  margin-bottom: 10px;
+}
+
+.feature-box p {
   color: #64748b;
   line-height: 1.6;
 }
 
+/* ================= FOOTER ================= */
+
 .footer {
+  padding: 45px 7%;
   background: #0f172a;
   color: white;
   text-align: center;
-  padding: 25px;
-  margin-top: 30px;
 }
 
-@media (max-width: 768px) {
+.footer-logo {
+  font-size: 25px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.footer-logo span {
+  color: #60a5fa;
+}
+
+.footer p {
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.copyright {
+  margin-top: 20px;
+  font-size: 12px !important;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1000px) {
   .nav-links {
     display: none;
   }
@@ -176,81 +517,92 @@ body {
     text-align: center;
   }
 
-  .hero-text h1 {
-    font-size: 38px;
+  .hero-content {
+    max-width: 700px;
   }
 
-  .cards {
+  .hero-content > p,
+  .main-search {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .specialization-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .features-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .feature-list {
+    text-align: left;
+  }
+}
+
+@media (max-width: 650px) {
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .nav-search {
+    display: none;
+  }
+
+  .hero {
+    padding: 55px 5%;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .main-search {
+    flex-direction: column;
+    background: white;
+    padding: 10px;
+  }
+
+  .main-search input {
+    width: 100%;
+  }
+
+  .main-search button {
+    width: 100%;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-visual {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .appointment-card {
+    right: 0;
+  }
+
+  .secure-card {
+    left: 0;
+  }
+
+  .specialization-grid,
+  .steps {
     grid-template-columns: 1fr;
   }
 
-  .hero-card {
+  .section {
+    padding: 65px 5%;
+  }
+
+  .feature-box {
     width: 100%;
   }
-}
-
-/* Authentication Pages */
-
-.auth-page {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #f7fbff;
-}
-
-.auth-box {
-  width: 400px;
-  padding: 40px;
-  background: white;
-  border-radius: 18px;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.auth-box h1 {
-  margin-bottom: 10px;
-  color: #1e3a8a;
-}
-
-.auth-box > p {
-  color: #64748b;
-  margin-bottom: 25px;
-}
-
-.auth-box input {
-  width: 100%;
-  padding: 13px;
-  margin-bottom: 15px;
-  border: 1px solid #dbe3ef;
-  border-radius: 8px;
-  font-size: 15px;
-  outline: none;
-}
-
-.auth-box input:focus {
-  border-color: #2563eb;
-}
-
-.auth-box button {
-  width: 100%;
-  padding: 13px;
-  border: none;
-  border-radius: 8px;
-  background: #2563eb;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 5px;
-}
-
-.auth-link {
-  margin-top: 20px !important;
-  margin-bottom: 0 !important;
-}
-
-.auth-link span {
-  color: #2563eb;
-  font-weight: bold;
-  cursor: pointer;
 }
