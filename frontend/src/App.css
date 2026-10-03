@@ -188,3 +188,69 @@ body {
     width: 100%;
   }
 }
+
+/* Authentication Pages */
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f7fbff;
+}
+
+.auth-box {
+  width: 400px;
+  padding: 40px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.auth-box h1 {
+  margin-bottom: 10px;
+  color: #1e3a8a;
+}
+
+.auth-box > p {
+  color: #64748b;
+  margin-bottom: 25px;
+}
+
+.auth-box input {
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 15px;
+  border: 1px solid #dbe3ef;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+}
+
+.auth-box input:focus {
+  border-color: #2563eb;
+}
+
+.auth-box button {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.auth-link {
+  margin-top: 20px !important;
+  margin-bottom: 0 !important;
+}
+
+.auth-link span {
+  color: #2563eb;
+  font-weight: bold;
+  cursor: pointer;
+}
