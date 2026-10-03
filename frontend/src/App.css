@@ -789,3 +789,195 @@ input {
     grid-template-columns: 1fr;
   }
 }
+/* ================= DOCTOR PROFILE PAGE ================= */
+
+.doctor-profile-page {
+  min-height: 100vh;
+  padding: 50px 7%;
+  background: #f7fbff;
+}
+
+.doctor-profile-page .back-home {
+  display: inline-block;
+  margin-bottom: 30px;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+/* Main Container */
+
+.profile-container {
+  max-width: 1050px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+/* Doctor Information */
+
+.profile-card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid #e5edf6;
+  box-shadow: 0 12px 35px rgba(37, 99, 235, 0.08);
+  text-align: center;
+}
+
+.profile-icon {
+  width: 130px;
+  height: 130px;
+  margin: 0 auto 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e8f1ff;
+  border-radius: 50%;
+  font-size: 75px;
+}
+
+.profile-info h1 {
+  font-size: 30px;
+  margin-bottom: 8px;
+  color: #172033;
+}
+
+.profile-info h3 {
+  color: #2563eb;
+  margin-bottom: 18px;
+}
+
+.profile-info p {
+  color: #64748b;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+.profile-tag {
+  display: inline-block;
+  padding: 6px 13px;
+  background: #ecfdf5;
+  color: #15803d;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+/* Booking Card */
+
+.booking-card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid #e5edf6;
+  box-shadow: 0 12px 35px rgba(37, 99, 235, 0.08);
+}
+
+.booking-card h2 {
+  font-size: 27px;
+  margin-bottom: 8px;
+}
+
+.booking-subtitle {
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 28px;
+}
+
+.booking-card label {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.booking-card input[type="date"] {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #dbe4ef;
+  border-radius: 9px;
+  outline: none;
+  font-size: 14px;
+  margin-bottom: 28px;
+}
+
+.booking-card input[type="date"]:focus {
+  border-color: #2563eb;
+}
+
+.booking-card h3 {
+  margin-bottom: 15px;
+  font-size: 17px;
+}
+
+/* Time Slots */
+
+.slots-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.slot-btn {
+  padding: 11px 8px;
+  background: #eff6ff;
+  color: #2563eb;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.slot-btn:hover {
+  background: #2563eb;
+  color: white;
+}
+
+/* Confirm Button */
+
+.confirm-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 9px;
+  background: #2563eb;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.confirm-btn:hover {
+  background: #1d4ed8;
+}
+
+/* Responsive */
+
+@media (max-width: 800px) {
+  .profile-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .doctor-profile-page {
+    padding: 35px 5%;
+  }
+
+  .profile-card,
+  .booking-card {
+    padding: 25px;
+  }
+
+  .slots-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .profile-info h1 {
+    font-size: 25px;
+  }
+}

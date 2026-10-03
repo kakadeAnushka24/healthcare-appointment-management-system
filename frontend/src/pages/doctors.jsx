@@ -94,7 +94,7 @@ function Doctors() {
               {doctor.experience}
             </p>
 
-            <Link to="/login">
+            <Link to="/doctor-profile">
               <button className="book-btn">
                 View Profile & Book
               </button>
