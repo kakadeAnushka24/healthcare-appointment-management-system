@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Login from "./pages/login";
 import Register from "./pages/register";
+import Doctors from "./pages/doctors";
 import "./App.css";
 
 function Home() {
@@ -32,7 +33,7 @@ function Home() {
         </div>
       </nav>
 
-      {/* Hero Section */}
+      {/* Hero */}
       <section className="hero">
         <div className="hero-content">
 
@@ -51,13 +52,14 @@ function Home() {
             and manage your healthcare easily from one place.
           </p>
 
-          {/* Main Search */}
           <div className="main-search">
             <span>🔍</span>
+
             <input
               type="text"
               placeholder="Search doctor, treatment or specialization..."
             />
+
             <button>Search</button>
           </div>
 
@@ -78,9 +80,12 @@ function Home() {
         </div>
 
         <div className="hero-visual">
+
           <div className="doctor-card">
             <div className="doctor-avatar">👨‍⚕️</div>
+
             <h3>Quality Healthcare</h3>
+
             <p>Care you can trust</p>
 
             <div className="doctor-status">
@@ -103,15 +108,21 @@ function Home() {
               <small>Your data is protected</small>
             </div>
           </div>
+
         </div>
       </section>
 
-      {/* Specializations */}
+      {/* Services */}
       <section className="section" id="services">
+
         <div className="section-heading">
           <span>OUR SERVICES</span>
+
           <h2>Healthcare at Your Fingertips</h2>
-          <p>Find the care you need quickly and easily.</p>
+
+          <p>
+            Find the care you need quickly and easily.
+          </p>
         </div>
 
         <div className="specialization-grid">
@@ -160,15 +171,21 @@ function Home() {
 
         <div className="section-heading">
           <span>HOW IT WORKS</span>
+
           <h2>Book Your Appointment Easily</h2>
-          <p>Three simple steps to get started.</p>
+
+          <p>
+            Three simple steps to get started.
+          </p>
         </div>
 
         <div className="steps">
 
           <div className="step">
             <div className="step-number">01</div>
+
             <h3>Find a Doctor</h3>
+
             <p>
               Search doctors by name or specialization.
             </p>
@@ -176,7 +193,9 @@ function Home() {
 
           <div className="step">
             <div className="step-number">02</div>
+
             <h3>Choose a Slot</h3>
+
             <p>
               Select an available date and time.
             </p>
@@ -184,7 +203,9 @@ function Home() {
 
           <div className="step">
             <div className="step-number">03</div>
+
             <h3>Book Appointment</h3>
+
             <p>
               Confirm your appointment and track its status.
             </p>
@@ -197,7 +218,9 @@ function Home() {
       <section className="features-section">
 
         <div className="feature-text">
+
           <span>WHY MEDICARE+</span>
+
           <h2>Healthcare Made Simple</h2>
 
           <p>
@@ -212,21 +235,27 @@ function Home() {
             <div>✓ Appointment status tracking</div>
             <div>✓ Secure user management</div>
           </div>
+
         </div>
 
         <div className="feature-box">
+
           <div className="big-icon">🏥</div>
+
           <h3>Complete Healthcare Management</h3>
+
           <p>
             Patients, doctors and administrators can manage
             their healthcare activities from one platform.
           </p>
+
         </div>
 
       </section>
 
       {/* Footer */}
       <footer className="footer">
+
         <div className="footer-logo">
           Medi<span>Care+</span>
         </div>
@@ -238,6 +267,7 @@ function Home() {
         <p className="copyright">
           © 2026 MediCare+. All rights reserved.
         </p>
+
       </footer>
 
     </div>
@@ -247,15 +277,19 @@ function Home() {
 function App() {
   return (
     <BrowserRouter>
+
       <Routes>
 
         <Route path="/" element={<Home />} />
+
+        <Route path="/doctors" element={<Doctors />} />
 
         <Route path="/login" element={<Login />} />
 
         <Route path="/register" element={<Register />} />
 
       </Routes>
+
     </BrowserRouter>
   );
 }

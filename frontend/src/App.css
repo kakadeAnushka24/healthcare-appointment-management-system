@@ -606,3 +606,186 @@ input {
     width: 100%;
   }
 }
+
+/* ================= DOCTORS PAGE ================= */
+
+.doctors-page {
+  min-height: 100vh;
+  padding: 50px 7%;
+  background: #f7fbff;
+}
+
+.doctors-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.back-home {
+  display: inline-block;
+  color: #2563eb;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.doctors-header > span {
+  display: block;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+}
+
+.doctors-header h1 {
+  font-size: 38px;
+  margin-bottom: 12px;
+}
+
+.doctors-header p {
+  color: #64748b;
+}
+
+/* Search */
+
+.doctor-search {
+  max-width: 650px;
+  margin: 0 auto 45px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  padding: 7px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.08);
+}
+
+.doctor-search span {
+  padding-left: 12px;
+}
+
+.doctor-search input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 13px 5px;
+  font-size: 14px;
+}
+
+.doctor-search button {
+  border: none;
+  background: #2563eb;
+  color: white;
+  padding: 13px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Doctor Cards */
+
+.doctors-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.doctor-profile-card {
+  background: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 18px;
+  border: 1px solid #e5edf6;
+  transition: 0.25s;
+}
+
+.doctor-profile-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(37, 99, 235, 0.12);
+  border-color: #bfdbfe;
+}
+
+.doctor-profile-icon {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e8f1ff;
+  border-radius: 50%;
+  font-size: 50px;
+}
+
+.doctor-profile-card h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.specialization {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #eff6ff;
+  color: #2563eb;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.doctor-profile-card p {
+  color: #64748b;
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+.doctor-profile-card .experience {
+  margin-bottom: 20px;
+}
+
+.book-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 9px;
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.book-btn:hover {
+  background: #1d4ed8;
+}
+
+/* Doctors Responsive */
+
+@media (max-width: 1000px) {
+  .doctors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .doctors-page {
+    padding: 40px 5%;
+  }
+
+  .doctors-header h1 {
+    font-size: 30px;
+  }
+
+  .doctor-search {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .doctor-search input,
+  .doctor-search button {
+    width: 100%;
+  }
+
+  .doctors-grid {
+    grid-template-columns: 1fr;
+  }
+}
